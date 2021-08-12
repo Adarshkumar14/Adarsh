@@ -53,7 +53,7 @@ Yes Litmus maintains a separate CRD manifest to support backward compatibility.
  
  ### How can users integrate Litmuschaos in their environment with Gitops?
 Ans: Gitops feature in Litmus enables users to sync workflows from a configured git repo, any workflow inserts/updates made to the repo will be monitored and picked up by litmus portal and will be executed on the target cluster. Litmus portal gitops also includes an event-driven chaos injection feature where users can annotate an application to be watched for changes and if and when the change happens chaos workflows can be triggered automatically. This integrates with other gitops tools like flux/argo cd and enables users to automatically run chaos workflows whenever a new release happens or a particular change occurs in the application.
-To configure a git repo the user must provide the Git URL of the repository and the Branch name and the authentication credentials which are of two types:
+To configure a git repo the user must provide the Git URL of the repository and the Branch name and the authentication credentials which are of two types:\t
 	a. Access Token
 	b. SSH Key
-Once GitOps is enabled, any new workflows created will be stored in the configured repo in the path litmus/<project-id>/<workflow-name>.yaml.
+Once GitOps is enabled, any new workflows created will be stored in the configured repo in the path `litmus/<project-id>/<workflow-name>.yaml`.
