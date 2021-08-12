@@ -41,7 +41,7 @@ These are agent components, which are launched by the control plane server, So f
 The litmusportal-server-service might not be reachable due to inbound rules you can enable the traffic to it if on GKE/EKS/AKS (by adding the port to inbound rules for traffic).
 You have to check the logs of the subscriber pod and expose the port mentioned for the communication with the server.
 
-### After logging in for the first time to the portal, /getStarted page  kept loading after I provided the new Password
+### After logging in for the first time to the portal, `/getStarted` page  kept loading after I provided the new Password
 
 First try to clear the browser cache and refresh the page, this might solve your problem.
 If  your problem is not solved then  delete all the cluster role bindings,PV and pvc used by litmus and try to reinstall the litmus again.
