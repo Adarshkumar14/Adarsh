@@ -16,7 +16,9 @@ We suggest using ingress, so that if the endpoint IP changes, then it won't affe
 ### Not able to connect to the Litmus chaos Control Plane hosted on GKE cluster.
 
 In GKE you have to setup a firewall rule to allow TCP traffic on the node port. You can use the following command:
+
 `gcloud compute firewall-rules create test-node-port --allow tcp:port`
+
 If this firewall rule is set up, It may be accessible on nodeIp:port where nodeIp is the external IP address of your node.
 
 ###  I forgot my Litmus portal password. How can I reset my credentials?
@@ -49,5 +51,5 @@ If your problem persists, then delete all the cluster role bindings, PV and PVC 
 ### In the logs of Helper pod, I am getting this error ` Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`
 
 You need to Provide the correct socket path. By default in Portal `CONTAINER_RUNTIME` is set to `docker`, 
-If  Your container runtime is `containerd` then  you have to change the `CONTAINER_RUNTIME` to `containerd`  and `SOCKET_PATH` to `/run/containerd.d/sock`.
+If  Your container runtime is `containerd` then  you have to change the `CONTAINER_RUNTIME` to `containerd`  and `SOCKET_PATH` to `/var/run/containerd/containerd.sock`.
 You can find these in tune experiments part of the tune workflow page.
