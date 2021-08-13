@@ -37,7 +37,7 @@ Yes Litmus maintains a separate CRD manifest to support backward compatibility.
 
 ### Can I run LitmusChaos Outside of my Kubernetes clusters?
 
-Yes, you can run the ansible experiments outside of the k8s cluster which is dockerized under this image litmuschaos/ansible-runner:ci. But other components such as chaos-operator,chaos-exporter, and runner are Kubernetes native. They requires k8s cluster to run on it.
+Yes, you can run the ansible experiments outside of the k8s cluster which is dockerized under this image litmuschaos/ansible-runner:ci. But other components such as chaos-operator, chaos-exporter, and runner are Kubernetes native. They requires k8s cluster to run on it.
 
 ### How to achieve High Availability of MongoDB and how can we add persistence to MongoDB?
 
